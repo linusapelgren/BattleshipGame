@@ -1,13 +1,18 @@
+# Imports
 import random
 import time
 
-
+# Define a class for the game board
 class Board:
+    # Initialize the board with a given size
     def __init__(self, size):
         self.size = size
+        # Create a 2D list to represent the board
         self.board = [['O' for _ in range(size)] for _ in range(size)]
+        # List to store the locations of the ships
         self.ship_locations = []
         time.sleep(0.5)
+        # Place ships randomly on the board
         for _ in range(size):
             while True:
                 ship_location = [random.randint(0, size-1) for _ in range(2)]
@@ -16,6 +21,7 @@ class Board:
                     self.board[ship_location[0]][ship_location[1]] = 'S'
                     break
 
+    # Print the computer's board, hiding the ships
     def print_computer_board(self):
         for row_idx, row in enumerate(self.board, start=1):
             printable_row = []
@@ -28,6 +34,7 @@ class Board:
                     printable_row.append('O')
             print(" ".join(printable_row))
 
+    # Print the player's board, showing the ships
     def print_player_board(self):
         for row_idx, row in enumerate(self.board, start=1):
             printable_row = []
@@ -38,6 +45,7 @@ class Board:
                     printable_row.append(cell)
             print(" ".join(printable_row))
 
+    # Handle a guess from the player or computer
     def guess(self, row, col):
         if [row, col] in self.ship_locations:
             self.board[row][col] = 'X'
@@ -52,7 +60,7 @@ class Board:
             print("Missed!")
             return False
 
-
+# Function to play the game
 def play_game():
     print("Choose board size:")
     print("1. 5x5")
@@ -120,7 +128,7 @@ def play_game():
             print("Computer wins!")
             break
 
-
+# Main game loop
 while True:
     play_game()
     play_again = input("Play again? (Y/N): \n")
