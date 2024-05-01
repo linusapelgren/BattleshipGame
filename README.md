@@ -7,27 +7,40 @@ After you have made your choice the game will start. It will ask you to guess a 
 ### Existing features
 - Different Board sizes 
     - You can choose different board sizes 
+
     ![Board choice](./assets/screenshots/boardchoice.PNG)
+
 - Random board generation
     - The game randomly places a set amount of ships on your board depending on the board size. 5 on 5x5, 10 on 10x10 and 15 on 15x15 
     - Your ships are marked with an S
     ![5x5](./assets/screenshots/5x5.PNG)
+
     ![10x10](./assets/screenshots/10x10.PNG)
+
     ![15x15](./assets/screenshots/15x15.PNG)
+
 - Dynamic board
     - Whenever you make a guess the board updates itself to show you where you have guessed. If you land a hit on a ship the character changes to an X and if you miss it becomes a * sign. If you guess the same spot another time nothing changes with the board but the game will tell you that you already guessed that spot and then go to the computers turn.
     ![Miss](./assets/screenshots/miss.PNG)
+
     ![Hit](./assets/screenshots/hit.PNG)
+
     ![Already guessed](./assets/screenshots/alreadyguessed.PNG)
+
 
 - Playing againts the computer
 - Maintaining the score on the board
 - Input validation and error checking
     - You cannot make a different choice of board than the 3 that are availible
+
     ![Miss](./assets/screenshots/boardsize.PNG)
+
     - The game prevents you from entering a guess outside the board.
+
     ![Miss](./assets/screenshots/invalidguess.PNG)
+
     - You must enter a number
+
     ![Miss](./assets/screenshots/letterguess.PNG)
 
 ### Future features
@@ -47,6 +60,7 @@ The main function which runs the game is called play_game
 None
 ### Validator testing
 - The code was tested using [CI Python Linter](https://pep8ci.herokuapp.com) where it found no errors
+
     - ![CI Python Linter](./assets/screenshots/pythonlinter.PNG)
 ## Deployment
 This project was deployed using the Code Insitute´s mock terminal for Heroku.
