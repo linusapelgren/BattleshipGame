@@ -36,6 +36,7 @@ After you have made your choice the game will start. It will ask you to guess a 
 - Maintaining the score on the board
 - Input validation and error checking
 - You cannot make a different choice of board than the 3 that are availible
+- Delay between each new line of text for increased readablility
 
 <img src="./assets/screenshots/boardsize.PNG" alt="Guess outside board size" width="500"/>
 
@@ -46,6 +47,10 @@ After you have made your choice the game will start. It will ask you to guess a 
 - You must enter a number
 
 <img src="./assets/screenshots/letterguess.PNG" alt="Letter Guessed" width="500"/>
+
+- Play again screen
+<img src="./assets/screenshots/playagain.PNG" alt="Letter Guessed" width="500"/>
+
 
 ### Future features
 - Local coop
